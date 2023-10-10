@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>servicios</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="https://kit.fontawesome.com/78725e5237.js" crossorigin="anonymous"></script>
+    <script src="./js/java"></script>
+
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav-logo">
+                <a href="index.html" >
+              <img src="./imagen/logoes.png" class="nav_title"></a> 
+            </div>
+            <ul class="nav_link nav_link--menu">
+            <li class="nav_items">
+             <a href="index.html" class="nav_links">Inicio</a>
+            </li>
+            <li class="nav_items">
+                <a href="nosotros.html" class="nav_links">Nosotros</a>
+               </li>
+               <li class="nav_items">
+                <a href="#" class="nav_links">Servicios</a>
+               </li>
+               <li class="nav_items">
+                <a href="#contactos" class="nav_links">Contactos</a>
+               </li>
+               <li class="nav_items">
+                <a href="https://www.facebook.com/groupore/?text=Deseo informe" target="_blank" class="footer_icons"><i class="fa-brands fa-facebook"></i></a>
+               </li>
+               <i class="fa-solid fa-circle-xmark"></i>
+            </ul>
+            <div class="nav_menu">
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+        </nav>
+     <section class="hero_container container">
+        <h1 class="hero_title">NUESTROS SERVICIOS</h1>
+        <p class="hero_paragraph">En Estudio Contable Grupo Oré E.I.R.L., ofrecemos una amplia gama de servicios especializados en contabilidad, auditoría, tributación, asesoría laboral, legal y financiera. Nuestra misión es proporcionar a nuestros clientes soluciones integrales y de
+             alta calidad para ayudarles a gestionar sus finanzas y cumplir con sus obligaciones legales y fiscales de manera eficiente y efectiva. Ya sea que necesite asesoramiento contable, auditoría de sus estados financieros o asistencia legal y tributaria, nuestro equipo altamente capacitado está aquí para brindarle 
+            el apoyo necesario para el éxito de su empresa.
+        </p>
+         
+     </section>
+    </header>
+    <main>
+       
+       <section >
+        <section class="container_services">
+            <div class="services_container">
+              <div class="service">
+                <button class="service_button" onclick="showConcept('contable')">CONTABLE</button>
+              </div>
+              <div class="service">
+                <button class="service_button" onclick="showConcept('tributaria')">TRIBUTARIO</button>
+              </div>
+              <div class="service">
+                <button class="service_button" onclick="showConcept('financiera')">FINANCIERA</button>
+              </div>
+              <div class="service">
+                <button class="service_button" onclick="showConcept('laboral')">LABORAL</button>
+              </div>
+              <div class="service">
+                <button class="service_button" onclick="showConcept('empresas')">EMPRESAS</button>
+              
+            </div>
+            <div class="service">
+                <button class="service_button" onclick="showConcept('comprobante')">EMISIÓN</button>
+                
+              
+            </div>
+            <div class="service">
+                <button class="service_button" onclick="showConcept('auditoria')" >AUDITORÍA</button>
+              
+            </div>
+          </section>
+          <div id="conceptos">
+            <div id="concepto_contable" class="concepto">
+                <h4 class="parrafo">SERVICIO</h4>
+                <h1 class="parrafo">CONTABLE</h1>
+              <p class="parrafo">El servicio principal que ofrecemos está el llevar la Contabilidad mediante un adecuado y correcto 
+                registro de las operaciones de su negocio, 
+                para ello contamos con Profesionales calificados y actualizados.</p>
+                <ul class="parrafo">
+                    <li>Registro de compras</li>
+                    <li>Registro de ventas</li>
+                    <li>Libro diario simplificado</li>
+                    <li>Libro de activo fijo</li>
+                    <li>Libro diario</li>
+                    <li>Libro mayor</li>
+                    <li>Demás libros contables complemetarios</li>
+                    <li>Registro de ventas</li>
+                 
+                  </ul>
+                  <a href="#contactos" class="cta-1">CONSULTAR</a>
+                  <img src="./imagen/contadoras1.jpg" class="imagen">
+            </div>
+            <div id="concepto_tributaria" class="concepto">
+                <h4 class="parrafo">SERVICIO</h4>
+                <h1 class="parrafo">TRIBUTARIO</h1>
+              <p class="parrafo">El asesoramiento fiscal es esencial para su empresa, ya que le permite conocer y cumplir con sus 
+                obligaciones tributarias de manera efectiva. Ofrecemos un servicio altamente beneficioso que
+                 se enfoca en la gestión de impuestos y el cumplimiento tributario, 
+                brindando soluciones clave para el éxito financiero de su empresa.
+              </p>
+                <ul class="parrafo">
+                    <li>Elaboración y presentación de impuestos mensuales.</li>
+                    <li>Solicitud de fraccionamiento y aplazamientos de pago.</li>
+                    <li>Elaboración y presentación de impuestos anuales.</li>
+                    <li>Entre otros.</li>
+                  
+                
+                  </ul>
+                  <a href="#contactos" class="cta-1">CONSULTAR</a>
+                  <img src="./imagen/contadoras2.jpg" class="imagen">
+          
+            </div>
+            <div id="concepto_financiera" class="concepto">
+                <h4 class="parrafo">SERVICIO</h4>
+                <h1 class="parrafo">FINANCIERA</h1>
+              <p class="parrafo">El objetivo principal de nuestro servicio es realizar informes financieros eficientes.
+              </p>
+                <ul class="parrafo">
+                    <li>Informes Financieros.</li>
+                    <li>Elaboración de informes diversos de índole financiero.</li>
+                    <li>Análisis de los informes financieros y otros.</li>
+                  </ul>
+                  <a href="#contactos" class="cta-1">CONSULTAR</a>
+                  <img src="./imagen/contadoras3.jpg" class="imagen">
+            
+              </div>
+              <div id="concepto_laboral" class="concepto">
+                <h4 class="parrafo">SERVICIO</h4>
+                <h1 class="parrafo">LABORAL</h1>
+              <p class="parrafo">La contratación del personal necesita un flujo organizado acuerdo a leyes
+                y normativas,cuenten o no con un departamente laboral en su empresa.
+              </p>
+                <ul class="parrafo">
+                    <li>Elaboración de planilla.</li>
+                    <li>Declaración del PLAME.</li>
+                    <li>Cálculo de beneficios sociales y otros.</li>
+                  </ul>
+                  <a href="#contactos" class="cta-1">CONSULTAR</a>
+                  <img src="./imagen/contadoras4.jpg" class="imagen">
+             
+              </div>
+              <div id="concepto_empresas" class="concepto">
+                <h4 class="parrafo">CONSTITUCIÓN DE</h4>
+                <h1 class="parrafo">EMPRESAS</h1>
+              <p class="parrafo">Constituye tu empresa con nosotros.Te asesoramos en:
+              </p>
+                <ul class="parrafo">
+                    <li>Elaboración del Acto Constitutivo.</li>
+                    <li>Inscripción en Registros Públicos.</li>
+                    <li>Asesoría y trámite de RUC ante la SUNAT.</li>
+                    <li>Asesoría contable, tributaria, laboral y financiera previa al inicio de tus actividades y otros.</li>
+                   
+                  </ul>
+                  <a href="#contactos" class="cta-1">CONSULTAR</a>
+                  <img src="./imagen/contadoras5.jpg" class="imagen">
+       
+              </div>
+              <div id="concepto_comprobante" class="concepto">
+                <h4 class="parrafo">EMISIÓN DE COMPROBANTES</h4>
+                <h1 class="parrafo">ELÉCTRONICOS</h1>
+              <p class="parrafo">Genera tus comprobantes electrónicos al instante y envíalos a tus clientes por email, de forma fácil y simple.
+              </p>
+                <ul class="parrafo">
+                    <li>Emisión de Factura y Boleta electrónico.</li>
+                    <li>Guía de Remisión Electrónica – Remitente y otros.</li>
+                    <a href="#contactos" class="cta-1">CONSULTAR</a>
+                    <img src="./imagen/contadoras6.jpg" class="imagen">
+                  </ul>
+                  
+             
+              </div>
+              <div id="concepto_auditoria" class="concepto">
+                <div class="imagen-auditoria">
+                   
+                  </div>
+                <h4 class="parrafo">SERVICIO</h4>
+                <h1 class="parrafo">AUDITORÍA</h1>
+              <p class="parrafo">La auditoría es una pieza clave para corroborar la información financiera 
+                de la empresa,ya que emiten informes de acuerdo a lo revisado.
+              </p>
+                <ul class="parrafo">
+                    <li>Informe de auditoría.</li>
+                    <li>Resumen de hallazgos encontrados.</li>
+                    <li>Recomendaciones en caso de encontrar contingencias.</li>
+                    <li>Informe de control interno.</li>
+                  
+                    
+                  </ul>
+                  <a href="#contactos" class="cta-1">CONSULTAR</a>
+                  <img src="./imagen/galeria5.jpg" class="imagen">
+             
+              </div>
+            
+          </div>
+  
+        </section>
+      <div class="seccion-noticias">
+        <div class="noticia">
+          <img src="./imagen/noticia.jpg">
+          <h3 class="parra">¿Es válido entregar las boletas de pago por medios electrónicos?</h3>
+          <p class="parra">Alternativamente y, previo acuerdo con el trabajador, cuando el pago de las obligaciones laborales económicas...</p>
+          <a href="https://noticierocontable.com/boletas-pago-por-correo-electronico/" class="leer-mas" target="_blank">Leer más</a>
+        </div>
+        <div class="noticia">
+          <img src="./imagen/noticia1.jpg">
+          <h3 class="parra">¿Cuánto me toca de gratificación de navidad?</h3>
+          <p class="parra">Diciembre es un mes de mucha alegría para muchos trabajadores del sector privado, motivado por el pago de la gratificación de navidad....</p>
+          <a href="https://noticierocontable.com/calculo-de-gratificacion-de-navidad/" class="leer-mas">Leer más</a>
+        </div>
+        <div class="noticia">
+          <img src="./imagen/noticia2.jpg">
+          <h3 class="parra">IGV interno en caída libre: ¿qué significa para la demanda interna?</h3>
+          <p class="parra">La recaudación del Impuesto General a las Ventas (IGV) alcanzó los S/ 6,878 millones en setiembre, cifra menor en 16.9% en comparación con el mismo mes del año 2022....</p>
+          <a href="https://www.contadoresyempresas.com.pe/igv-interno-en-caida-libre-que-significa-para-la-demanda-interna/" class="leer-mas">Leer más</a>
+        </div>
+      </div>
+      
+        
+    </main>
+    <footer  class="footer_form" id="contactos">
+        <section class="footer_container container">
+            <div class="footer-social">
+                <h3 class="footer_title">DIRECCIÓN</h3>
+           <p class="footer_subtitle"><i class="fa-solid fa-location-dot"></i>JR. 28 DE JULIO Nº 669-AYACUCHO-HUAMANGA</p>
+           <p class="footer_subtitle"><i class="fa-solid fa-phone"></i>+51 931 977 748</p>
+           <p class="footer_subtitle"><i class="fa-sharp fa-regular fa-envelope"></i>studiocontable.groupore@gmail.com</p>
+             <h3 class="footer_title" >HORARIO DE ATENCIÓN</h3>
+            <p class="footer_subtitle"><i class="fa-solid fa-check"></i>L-V 9:00 AM-7:00 PM</p>
+           <p class="footer_subtitle"><i class="fa-solid fa-check"></i>S 9:00 AM-1:00 PM</p>
+                <a href="https://wa.me/51931977748?text=Deseo informe" target="_blank"class="footer_icons"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/groupore/?text=Deseo informe" target="_blank" class="footer_icons"><i class="fa-brands fa-facebook"></i></a>
+             </div>
+         <form action="https://formsubmit.co/studiocontable.groupore@gmail.com" method="POST" class="formulario">
+            <div class="footer_inputs">
+                <label for="razon-social">Razón Social</label>
+                <input type="text" id="razon-social" name="razon_social" required placeholder="Ingrese su razón social" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" class="footer_input">
+            </div>
+            <div class="footer_inputs">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre"  class="footer_input" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+">
+            </div>
+            <div class="footer_inputs">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" required placeholder="Ingrese su apellido" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" class="footer_input">
+            </div>
+            <div class="footer_inputs">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" required placeholder="Ingrese su correo electrónico" class="footer_input">
+            </div>
+            <div class="footer_inputs">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="Ingrese solo números" maxlength="9" pattern="[0-9]{1,9}" class="footer_input">
+            </div>
+            <div class="footer_inputs">
+               <label for="opciones">Cotización</label>
+               <select id="opciones" name="opciones">
+                   <option name="otro" ><p>Seleccionar</p></option>
+                   <option name="contable">Asesoría Contable</option>
+                   <option name="tributario">Asesoría Tributaria</option>
+                   <option name="financiera" >Asesoría Financiera</option>
+                   <option name="laboral" >Asesoría Laboral</option>
+                   <option name="auditoria" >Constitución de empresas</option>
+                   <option name="sunafil" >Emisión de comprobantes electrónicos</option>     
+               </select>
+           </div>
+            <div class="footer_inputs">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="footer_button" >Enviar </button>
+
+         </form>
+    </footer>
+    <div class="whatsapp-button">
+        <a href="https://wa.me/51931977748?text=Necesito ayuda" target="_blank">
+            <img src="./imagen/wasa.jpg" alt="WhatsApp">
+            <span>¿Necesitas ayuda?!Te ayudamos...!</span>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,887 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+    --padding-container: 100px 0;
+    --color-title: rgb(228, 23, 23);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+}
+.container{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0;
+  overflow: hidden;
+  padding:var(--padding-container);
+  font-weight: bold;
+
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff;
+}
+
+.hero::before{
+   content: "";
+   position: absolute;
+   top:0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: linear-gradient(180deg, #000000c8 0%, #000000c8 100%),url(../imagen/contadora1.jpg),url(../imagen/contadora2.jpg),
+   url(../imagen/contadora3.jpg);
+   background-size: cover;
+   clip-path: polygon(0 0, 100% 0, 100% 95%, 100% 95%, 0 95%);
+   z-index: -1;
+   animation: fade 9s infinite;
+   background-color: rgba(257, 257, 257, 0.9);
+
+}
+@keyframes fade {
+    0%, 100% {
+       opacity: 0;
+    }
+    33.33% {
+       opacity: 1;
+       background-image: linear-gradient(180deg, #000000c8 0%, #000000c8 100%), url(../imagen/contadora1.jpg);
+    }
+    66.66% {
+       opacity: 1;
+       background-image: linear-gradient(180deg, #000000c8 0%, #000000c8 100%), url(../imagen/contadora2.jpg);
+    }
+    100% {
+       opacity: 1;
+       background-image: linear-gradient(180deg, #000000c8 0%, #000000c8 100%), url(../imagen/contadora3.jpg);
+    }
+ }
+
+/*Poniendo css a NAV */
+.nav{
+    --padding-container:0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav_title{
+    font-weight: 300;
+    width: 200px; /* Cambia este valor al tamaño deseado en píxeles */
+    height: auto; /* Esto mantiene la proporción de la imagen */
+    border-radius: 150px;
+
+}
+.nav_link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+    
+}
+
+.nav_link a:hover {
+    color: red; /* Color cuando el cursor está encima del enlace */
+}
+.nav_link:hover {
+    transform: scale(0.99); /* Cambia el tamaño de la opción cuando se coloca el cursor encima */
+}
+.nav_items{
+    list-style: none;
+
+}
+
+.nav_links{
+    color: #fff;
+    text-decoration: none;
+}
+.nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+.fa-solid.fa-bars{
+    display: block;
+    width: 30px;
+}
+.fa-solid.fa-circle-xmark{
+    display: none;
+    
+}
+/*PARA RESPONSIVE*/
+
+ /* Estilos para la lista principal y los elementos de submenú */
+.nav_items {
+    list-style-type: none; /* Elimina las viñetas de la lista principal */
+    position: relative; /* Establece la posición relativa para alinear el submenú */
+}
+
+.sub_menu {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    background-color: #fff; /* Cambia el fondo del submenú a blanco */
+    border: 1px solid #ccc; /* Agrega un borde al submenú */
+    min-width: 200px; /* Ancho mínimo del submenú */
+    padding: 0; /* Elimina el relleno del submenú */
+    margin: 0; /* Elimina el margen del submenú */
+}
+
+
+/*Modificando hero Container*/
+.hero_container {
+    max-width: 800px;
+    display: grid;
+    grid-auto-rows: max-content;
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: justify;
+    align-items: center; /* Centrar verticalmente */
+    line-height: 1.8; /* Ajusta el valor según tu preferencia */
+
+    /* Centrar en el centro de la pantalla */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: normal; /* Elimina la negrita */
+   
+}
+.hero_title{
+ 
+    font-size: 3rem;
+}
+.hero_paragraph{
+    margin-bottom: 20px;
+}
+.cta{
+    display: inline-block;
+    background-color: rgba(175, 11, 11, 0.712);
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+    transition: background-color 0.3s, transform 0.3s;
+   
+}
+.cta:hover {
+    background-color: rgba(231, 12, 12, 0.712); /* Cambia el color de fondo a un rojo claro al pasar el cursor */
+    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el cursor */
+}
+
+
+/*About*/
+.about {
+    text-align: center;
+    
+}
+.container_about {
+    /* Fondo blanco oscuro */
+    background-color: rgba(257, 257, 257, 0.9);
+    /* Agregar el fondo existente */
+    
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    overflow: hidden;
+    clip-path: polygon(50% 0, 100% 1%, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 1%);
+}
+.subtitle_1{
+    color: rgb(10, 10, 10);
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center; /* Centra el texto horizontalmente */
+    font-weight: bold; /* Pone el texto en negrita */
+    padding:40px; /* Agrega espacio alrededor del texto */
+}
+.about_paragraph{
+    line-height: 1.7;
+    color: rgb(10, 10, 10);
+
+}
+.about_main{
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit,minmax(260px,auto));
+    column-gap: 5em;
+}
+.about_main p {
+    max-width: 100%; /* Asegura que el texto no se desborde de las columnas */
+}
+.about_icons{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 360px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: justify;
+}
+.about_icon{
+   width: 300px;
+   transition: transform 0.3s; 
+}
+.about_icon:hover {
+    transform: scale(1.2); /* Aumentar el tamaño en un 20% cuando se detecte el evento hover */
+  }
+
+  .about_title{
+    color: rgb(10, 10, 10);
+    text-align: center;
+    display: inline-block;
+  }
+/*knowledege*/
+.knowledege{
+    background-color: rgba(255, 255, 255, 0.9);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow: hidden;
+    clip-path: polygon(50% 0, 100% 1%, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 1%);
+
+}
+.knowledege_paragraph{
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: rgb(10, 10, 10);
+    text-align: justify;
+    padding-left: 40px;
+    font-weight: normal; /* Elimina la negrita */
+    
+}
+.knowledege_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 5px;
+    
+    gap: 200px; /* Añade espacio entre las columnas */
+    transition: transform 0.2s; /* Agregamos una transición suave */ 
+    
+}
+
+
+.knowledge_container:hover {
+    transform: scale(1.1); /* Cambia el tamaño al 110% cuando se pasa el cursor sobre él */
+}
+.knowledege_picture{
+    max-width: 500px;
+    
+}
+.subtitle {
+    text-align: center; /* Centramos el texto horizontalmente */
+    color: rgb(10, 10, 10);/* Cambiamos el color del texto a blanco */
+    text-align: justify;
+    padding-left: 200px;
+    align-items: center; /* Centramos verticalmente */
+    gap: 2em;
+    margin-top: 20px; /* Agrega espacio en la parte superior del .subtitle */
+
+
+}
+.knowledege_img{
+    width: 100%;
+    display: block;
+    transition: width 0.3s;
+    
+}
+.knowledege_img:hover {
+    width: 120%; /* Cambia el tamaño al 120% cuando se coloca el cursor sobre la imagen */
+}
+.cta {
+    display: block; /* Cambiamos el enlace a un bloque para que ocupe el ancho completo disponible */
+    width: max-content; /* Establecemos el ancho máximo para que se ajuste al contenido */
+    margin: 0 auto; /* Centramos horizontalmente el enlace */
+    text-align: center; /* Centramos el texto dentro del enlace */
+}
+/*Footer*/
+.footer_form{
+
+    background-color: #111410;
+    
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    clip-path: polygon(50% 0, 100% 2%, 100% 100%, 100% 100%, 0 100%, 0% 100%, 0 2%);
+   
+}
+.footer_title{
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 30px;
+
+}
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 60px;
+}
+/* Estilo para el contenedor del formulario */
+.form-container {
+    border: 1px solid #ccc; /* Borde del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    max-width: 500px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+/* Estilo para los elementos del formulario */
+.footer_inputs {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block; /* Colocar etiquetas en una línea separada */
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%; /* Ancho completo del elemento */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para el botón */
+.footer_button {
+    background-color: #ff000da6;
+    color: #fff;
+    height: 40px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Hacer que el botón sea un elemento de bloque para centrarlo */
+    transition: background-color 0.3s, transform 0.3s; /* Agregamos transiciones suaves */
+    margin: 0 auto; /* Centrar horizontalmente el botón en el formulario */
+   
+}
+
+/* Estilo cuando el cursor está encima */
+.footer_button:hover {
+    background-color: #ff000d; /* Cambia el color de fondo */
+    transform: scale(1.1); /* Cambia el tamaño al 110% del tamaño original */
+}
+
+/* Contenedor para el formulario con fondo blanco */
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px; /* Establece el ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario en la página */
+    max-height: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    transition: transform 0.3s;
+    
+}
+.formulario:hover {
+    transform: scale(1.1); /* Cambia el tamaño del formulario al 110% cuando el cursor esté encima */
+}
+.footer_inputs {
+    flex-basis: calc(50% - 10px); /* Establece el ancho de las columnas al 50% con un espacio de 10px entre ellas */
+    margin-bottom: 20px; /* Espacio entre las filas */
+}
+
+.footer_inputs label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer_input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/*Poniendo color a los textos de atencion*/
+.footer-social {
+    background-color: #f4f4f4; /* Color de fondo para el div */
+    padding: 20px; /* Espaciado interno para el contenido */
+    text-align: center; /* Alinea el contenido al centro */
+    margin-left: 50px; /* Margen izquierdo */
+    margin-right: 50px; /* Margen derecho */
+    transition: transform 0.3s;
+    border-radius: 10px;
+
+}
+.footer-social:hover {
+    transform: scale(1.1); /* Cambia el tamaño del elemento al 110% cuando el cursor esté encima */
+}
+
+.footer_title {
+    font-size: 18px; /* Tamaño de fuente para los títulos */
+    color: #4e0303; /* Color del texto de los títulos */
+    margin-bottom: 3px;
+    
+}
+
+.footer_subtitle {
+    font-size: 14px; /* Tamaño de fuente para los subtítulos */
+    color: #4e0303; /* Color del texto de los subtítulos */
+    padding-left: 20px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.footer_icons {
+    font-size: 24px; /* Tamaño de fuente para los íconos de redes sociales */
+    margin-right: 10px; /* Espaciado derecho entre los íconos */
+    color: #119462; /* Color de los íconos */
+    text-decoration: none; /* Elimina la subrayado de los enlaces */
+    margin-top: 30px;
+    transition: transform 0.3s;
+}
+.footer_icons:hover {
+    transform: scale(1.2); /* Cambia el tamaño de los íconos al 120% cuando el cursor esté encima */
+}
+
+.footer_icons:hover {
+    color: #00aaff; /* Cambia el color de los íconos cuando el cursor está encima */
+}
+
+/*PARA WASA*/
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la posición vertical según tus preferencias */
+    right: 20px; /* Ajusta la posición horizontal según tus preferencias */
+    z-index: 1000; /* Asegura que el botón esté en la parte superior de otros elementos */
+    background-color: #25d366; /* Cambia el color de fondo según tus preferencias */
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al botón */
+    border-radius: 20px;
+}
+
+.whatsapp-button a {
+    display: flex; /* Hace que los elementos dentro de <a> se muestren en línea */
+    align-items: center; /* Centra verticalmente los elementos dentro de <a> */
+    text-decoration: none;
+    color: #fff; /* Cambia el color del texto según tus preferencias */
+}
+
+.whatsapp-button img {
+    width: 40px; /* Ajusta el tamaño de la imagen según tus preferencias */
+    height: auto;
+    margin-right: 5px; /* Ajusta el espacio entre la imagen y el texto */
+}
+
+.whatsapp-button span {
+    font-size: 14px; /* Ajusta el tamaño del texto según tus preferencias */
+}
+/*PARA SERVICIOS */
+
+ 
+/*PARA NOSOTROS.HTML*/
+/* Configuración de las imágenes de fondo */
+.about_main1 {
+    background-image: linear-gradient(180deg, #000000c8 0%, #000000c8 100%), url(../imagen/vision3.jpg);
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out; /* Agregamos una transición para las imágenes de fondo */
+    height: 400px; /* Ajusta la altura a la deseada */
+    min-height: 400px; /* Establece una altura mínima deseada */
+    
+  
+}
+
+/* Define una animación para cambiar entre las imágenes */
+@keyframes changeBackground {
+    0% { background-image: linear-gradient(180deg, #000000c8 0%, #000000c8 100%), url(../imagen/vision1.jpg); }
+    33% { background-image: linear-gradient(180deg, #000000c8 0%, #000000c8 100%), url(../imagen/vision2.jpg); }
+    66% { background-image: linear-gradient(180deg, #000000c8 0%, #000000c8 100%), url(../imagen/vision3.jpg); }
+    100% { background-image: linear-gradient(180deg, #000000c8 0%, #000000c8 100%), url(../imagen/vision3.jpg); }
+}
+
+/* Aplicamos la animación a la clase que contiene las imágenes de fondo */
+.about_main1:hover {
+    animation: changeBackground 9s linear infinite; /* Cambia las imágenes cada 9 segundos de manera infinita */
+}
+ 
+
+.about_icons1 {
+    transition: transform 0.3s; /* Transición para el artículo */
+    opacity: 0; /* Oculta el artículo inicialmente */
+    margin-right: 20px; /* Ajusta el espaciado entre el texto y las imágenes */
+}
+
+.about_icons1 img1 {
+    transition: transform 0.3s; /* Transición para las imágenes */
+}
+
+.about_main1:hover .about_icons1 {
+    transform: translateY(-10px); /* Mueve el artículo hacia arriba al pasar el cursor */
+    opacity: 1; /* Muestra el artículo al pasar el cursor */
+}
+
+.about_icons1:hover img1 {
+    transform: scale(1.1); /* Aumenta el tamaño de las imágenes al pasar el cursor */
+}
+
+/* Configuración de las imágenes de fondo */
+.about_icons1::before {
+    content: "";
+    display: block;
+    background-image: url(./imagen/galeria4.jpg);
+    background-size: cover;
+    width: 100px; /* Ancho de la imagen de fondo */
+    height: 100px; /* Altura de la imagen de fondo */
+    transition: transform 0.3s; /* Transición para la imagen de fondo */
+    margin-right: 20px; /* Ajusta el espaciado entre la imagen y el texto */
+}
+
+.about_icons1::before:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen de fondo al pasar el cursor */
+}
+.about_title1{
+    color: #fff; /* Color blanco */
+    font-weight: bold; /* Negrita */
+}
+.about_paragraph1 {
+    color: #fff; /* Color blanco */
+    text-align: justify; /* Justifica el texto */
+    margin: 0; /* Elimina el margen predeterminado de los párrafos */
+    padding: 0; /* Elimina el relleno predeterminado de los párrafos */
+    line-height: 2; /* Ajusta el espaciado entre líneas según tus preferencias */
+    margin-left:30px; /* Ajusta el valor según cuánto desees mover la imagen hacia la derecha */
+}
+.about_container {
+    display: flex;
+    flex-direction: row-reverse; /* Cambia la dirección de los elementos */
+    align-items: center; /* Centrar verticalmente */
+}
+
+
+
+  
+  .knowledege_img1 {
+    width: 400px; /* Ajusta el tamaño de la imagen según tus preferencias */
+    height: 400px; /* Ajusta el tamaño de la imagen según tus preferencias */
+    display: block;
+    max-width: 100%; /* Asegura que la imagen no se desborde del círculo */
+    border-radius: 50%; /* Aplica un borde redondeado para crear un círculo */
+    float: right; /* Utiliza float para alinear la imagen a la derecha */
+    transition: transform 0.3s; /* Agrega transición para el efecto de escala al hacer hover */
+  }
+.knowledege_img1:hover {
+    transform: scale(1.1); /* Cambia el tamaño al 120% cuando se coloca el cursor sobre la imagen */
+}
+.about_title1{
+    text-align: center; /* Centramos el texto horizontalmente */
+    color: #fff;
+    text-align: justify;
+    padding-left: 200px;
+    align-items: center; /* Centramos verticalmente */
+    gap: 2em;
+    margin-top: 10px; /* Agrega espacio en la parte superior del .subtitle */
+
+
+}
+.about_main1 {
+    overflow: hidden; /* Clear floats */
+  }
+  
+  .about_icons1 {
+    float: left; /* Hacer que el contenido flote a la izquierda */
+    width: 50%; /* Asignar el ancho deseado al contenido de texto */
+    padding-right: 20px; /* Espaciado entre la imagen y el texto (ajusta según tu diseño) */
+  }
+  
+  /*PARA COLUMNAS*/
+  .additional_columns {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ccc; /* Color de fondo plomo */
+    padding: 20px;
+    height: 400px;
+}
+
+.column {
+    width: 30%;
+    position: relative;
+}
+
+.box {
+    background-color: #ccc; /* Color de fondo plomo */
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+    color: white;
+    font-size: 15px; /* Tamaño de texto de 20px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    line-height: 2; /* Ajusta el espaciado entre líneas según tus preferencias */
+    
+}
+
+.box:hover .overlay {
+    opacity: 1;
+}
+.column:hover .box {
+    background-color: black; /* Cambiar el color de fondo a negro al pasar el cursor */
+    color: white; /* Cambiar el color del texto a blanco al pasar el cursor */
+    height: 380px;
+}
+/*PARA SERVICIOS.HTML*/
+/* Estilo base para los servicios */
+/* Estilo base para los servicios */
+.service {
+    display: inline-block; /* Mostrar los servicios en línea (horizontalmente) */
+    margin-right: 0; /* Eliminar el margen entre los servicios */
+    padding: 10px; /* Espaciado interno */
+    background-color: #ccc; /* Color de fondo gris */
+    color: #000; /* Color de texto negro */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de color */
+    
+  }
+  
+  /* Estilo cuando el cursor está encima */
+  .service:hover {
+    background-color: #000; /* Cambiar el color de fondo a negro */
+    color: #fff; /* Cambiar el color de texto a blanco */
+  }
+  /* Estilos para los botones de servicio */
+  .container_services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Los botones ocuparán el ancho disponible */
+    gap: 10px; /* Espacio entre los botones */
+  }
+  
+  .service_button {
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    padding: 10px 0; /* Espaciado vertical y 0 espaciado horizontal (ajusta según tus necesidades) */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    gap: 200px; /* Espacio entre los botones */
+    width: 160px;
+    height:20px;
+  }
+
+  
+  /* Estilo cuando el cursor está encima del botón */
+  .service_button:hover {
+    background-color: #000; /* Cambiar el color de fondo a negro */
+    color: #fff; /* Cambiar el color de texto a blanco */
+  }
+  /* Estilo inicial para ocultar todos los conceptos excepto el de Contable */
+.concepto {
+    display: none; /* Ocultar todos los conceptos */
+ flex-wrap: wrap;
+  justify-content: space-between; /* Espacio entre las dos columnas */
+  align-items: flex-start; /* Alinear elementos arriba */
+    gap: 2em;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  #concepto_contable {
+    display: block; /* Mostrar el concepto de Contable */
+  }
+  /*PARA TEXTO*/
+  /* Aplica justificación de texto y estilo de diseño de columna para los conceptos */
+/* Contenedor principal para los conceptos */
+/* Estilo para el contenedor principal */
+
+  
+/* Estilo para la columna de la imagen */
+.imagen-auditoria {
+  flex: 1; /* Ocupar el espacio disponible */
+  max-width: 50%; /* Ajusta el ancho de la imagen según tus preferencias */
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilo para la columna del contenido de texto */
+.contenido {
+  flex: 1; /* Ocupar el espacio disponible */
+}
+/* Estilo para el fondo del contenido de los conceptos */
+.parrafo {
+    width: 50%; /* Establece el ancho del elemento al 50% del contenedor padre */
+    text-align: justify;
+    margin-left: 80px;
+    margin-top: 10px; /* Agrega espacio en la parte superior del .subtitle */
+    line-height: 1.5; /* Ajusta el espaciado entre líneas según tus preferencias */
+    
+  }
+  .cta-1 {
+    display: block; /* Hace que el enlace sea un bloque, lo que lo coloca debajo del párrafo */
+    margin-top: 10px; /* Agrega espacio entre el párrafo y el enlace */
+    justify-self: center;
+    background-color: rgba(175, 11, 11, 0.712);
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 150px;
+ margin-left: 250px;
+  }
+.cta-1:hover {
+    background-color: rgba(231, 12, 12, 0.712); /* Cambia el color de fondo a un rojo claro al pasar el cursor */
+    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el cursor */
+}
+  .imagen{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    margin-left: 500px;
+    transition: transform 0.3s; /* Agregamos una transición suave */
+
+  }
+  .imagen:hover {
+    transform: translate(-50%, -80%) scale(1.1); /* Cambiamos el tamaño al 110% en hover */
+    
+  }
+  /*PARA NOTICIAS*/
+ /* Estilo para la sección de noticias */
+.seccion-noticias {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  /* Estilo para cada noticia individual */
+  .noticia {
+    flex: 1;
+    background-color: rgba(255, 256, 256, 0.10);
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    position: relative;
+    height: 500PX;
+    width: 100PX;
+  }
+  /*MEJORANDO NOSOTROS*/
+   .tamaño{
+     width: 300px;
+     height: 200px;
+   }
+  
+  /* Estilo para la imagen dentro de cada noticia */
+  .noticia img {
+    width: 200px;
+    max-width: 100%;
+   
+    
+  }
+
+  /* Estilo para el contenido que aparecerá al hacer hover en la noticia */
+  .noticia:hover {
+    background-color: #000; /* Cambio de fondo a negro en hover */
+    cursor: pointer;
+  }
+  
+  .noticia:hover h3,
+  .noticia:hover p {
+    display: block; /* Mostrar título y párrafo en hover */
+    color: #fff; /* Color del texto en hover */
+  }
+  
+  /* Estilo para el título y el párrafo dentro de cada noticia */
+  .noticia h3,
+  .noticia p {
+    display: none; /* Ocultar título y párrafo por defecto */
+    color: #000; /* Color del texto por defecto */
+  }
+
+  
+  /* Estilo para el párrafo dentro de .noticia */
+  .noticia .parra {
+    margin-bottom: 10px; /* Agrega espacio entre el párrafo y el enlace "Leer más" */
+  }
+  
+  /* Estilo para el enlace "Leer más" dentro de .noticia */
+  .noticia .leer-mas {
+    display: block; /* Hacer que el enlace ocupe todo el ancho del contenedor */
+    color: rgb(104, 9, 9); /* Color de letra blanco */
+  }
+  /*para reponsive*/
+  /* Estilos para pantallas grandes */
+.nav_menu {
+    display: none; /* Oculta el icono del menú en pantallas grandes */
+}
+
+nav ul {
+    display: flex; /* Muestra la lista horizontalmente en pantallas grandes */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .nav_menu {
+        display: block; /* Muestra el icono del menú solo en pantallas pequeñas */
+        cursor: pointer;
+    }
+
+    .nav_link--menu {
+        display: none; /* Oculta la lista en pantallas pequeñas */
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Ajusta la posición según tus necesidades */
+        left: 0;
+        width: 100%;
+    }
+
+    .nav_menu.active + .nav_link--menu {
+        display: flex !important; /* Muestra la lista en posición vertical */
+        flex-direction: column;
+    }
+
+    .nav_items {
+        margin: 10px 0; /* Espaciado vertical entre elementos de la lista */
+    }
+
+    /* Muestra los enlaces por defecto en posición vertical */
+    .nav_links {
+        display: block;
+    }
+}

@@ -1,0 +1,21 @@
+
+function showConcept(service) {
+  // Oculta todos los conceptos
+  const conceptos = document.querySelectorAll('.concepto');
+  conceptos.forEach(concepto => {
+    concepto.style.display = 'none';
+  });
+
+  // Muestra el concepto correspondiente al servicio seleccionado
+  const conceptoSeleccionado = document.getElementById(`concepto_${service}`);
+  conceptoSeleccionado.style.display = 'block';
+}
+
+// Agrega un evento de clic al icono de menú para mostrar/ocultar el menú
+const navMenu = document.querySelector('.nav_menu');
+const navLinks = document.querySelector('.nav_link--menu');
+
+navMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active'); // Agrega o quita la clase 'active' al icono de menú
+    navLinks.classList.toggle('active'); // Agrega o quita la clase 'active' al menú
+});
