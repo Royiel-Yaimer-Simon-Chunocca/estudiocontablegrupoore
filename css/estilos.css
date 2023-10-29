@@ -106,6 +106,7 @@ body{
     margin-left: auto;
     cursor: pointer;
     display: none;
+   
 }
 .fa-solid.fa-bars{
     display: block;
@@ -304,14 +305,26 @@ body{
     text-align: center; /* Centramos el texto dentro del enlace */
 }
 /*Footer*/
-.footer_form{
-
-    background-color: #111410;
-    
-    background-size: 20px 20px;
-    background-position: 0 0,10px 10px;
+.footer_form {
     clip-path: polygon(50% 0, 100% 2%, 100% 100%, 100% 100%, 0 100%, 0% 100%, 0 2%);
-   
+    background-image: url('../imagen/fondo123.jpg'), url('../imagen/contadora2.jpg'), url('../imagen/contadora100.jpg'); /* Rutas de las tres imágenes */
+    background-size: cover; /* Ajusta el tamaño de las imágenes al contenedor */
+    animation: backgroundTransition 6s linear infinite; /* 2 segundos por imagen, 3 imágenes en total */
+}
+
+@keyframes backgroundTransition {
+    0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+    33.33% {
+        background-position: 100% 0, 0 0, 0 0;
+    }
+    66.66% {
+        background-position: 100% 0, 100% 0, 0 0;
+    }
+    100% {
+        background-position: 0 0, 100% 0, 100% 0;
+    }
 }
 .footer_title{
     font-weight: 300;
@@ -669,40 +682,58 @@ img {
     background-color: #ccc; /* Color de fondo gris */
     color: #000; /* Color de texto negro */
     transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de color */
+    margin-left: 60px;
+    border-radius: 20px;
+    transition: transform 0.3s, background-color 0.3s; /* Agrega una transición suave para el cambio de tamaño y de color */
     
+     
+    
+   
+    
+  }
+  .service:hover {
+    transform: scale(1.1); /* Cambia el tamaño del botón al 110% del tamaño original en el hover */
+    background-color: rgb(83, 16, 16); /* Cambia el color de fondo a rojo en el hover */
+    color: #fff; /* Cambia el color del texto a blanco en el hover */
+   
   }
   
   /* Estilo cuando el cursor está encima */
-  .service:hover {
-    background-color: #000; /* Cambiar el color de fondo a negro */
-    color: #fff; /* Cambiar el color de texto a blanco */
-  }
+ 
   /* Estilos para los botones de servicio */
   .container_services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Los botones ocuparán el ancho disponible */
     gap: 10px; /* Espacio entre los botones */
+    
   }
-  
+ 
   .service_button {
-    background-color: #ccc;
-    color: #000;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
-    padding: 10px 0; /* Espaciado vertical y 0 espaciado horizontal (ajusta según tus necesidades) */
-    width: 100%; /* Ocupar todo el ancho disponible */
+    background: none;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    gap: 200px; /* Espacio entre los botones */
-    width: 160px;
-    height:20px;
+    width: 100px; /* Ancho de 150 píxeles */
+    height: 20px; /* Altura de 40 píxeles */
+    transition: transform 0.3s, background-color 0.3s; /* Agrega una transición suave para el cambio de tamaño y de color */
+ 
+    color: #000; /* Color de texto original */
+   
+    
   }
 
   
   /* Estilo cuando el cursor está encima del botón */
   .service_button:hover {
-    background-color: #000; /* Cambiar el color de fondo a negro */
-    color: #fff; /* Cambiar el color de texto a blanco */
+    transform: scale(1.1); /* Cambia el tamaño del botón al 110% del tamaño original en el hover */
+    background-color: rgb(83, 16, 16); /* Cambia el color de fondo a rojo en el hover */
+    color: #fff; /* Cambia el color del texto a blanco en el hover */
+   
   }
+
   /* Estilo inicial para ocultar todos los conceptos excepto el de Contable */
 .concepto {
     display: none; /* Ocultar todos los conceptos */
@@ -711,6 +742,7 @@ img {
   align-items: flex-start; /* Alinear elementos arriba */
     gap: 2em;
     background-color: rgba(255, 255, 255, 0.9);
+   
   }
   
   #concepto_contable {
@@ -733,7 +765,11 @@ img {
 .contenido {
   flex: 1; /* Ocupar el espacio disponible */
 }
+
 /* Estilo para el fondo del contenido de los conceptos */
+.contenedor {
+    padding: 20px; /* Agrega espacio entre el contenedor y el borde de la pantalla */
+}
 .parrafo {
     width: 50%; /* Establece el ancho del elemento al 50% del contenedor padre */
     text-align: justify;
@@ -742,6 +778,7 @@ img {
     line-height: 1.5; /* Ajusta el espaciado entre líneas según tus preferencias */
     
   }
+ 
   .cta-1 {
     display: block; /* Hace que el enlace sea un bloque, lo que lo coloca debajo del párrafo */
     margin-top: 10px; /* Agrega espacio entre el párrafo y el enlace */
@@ -787,6 +824,7 @@ img {
   .noticia {
     flex: 1;
     background-color: rgba(255, 256, 256, 0.10);
+    
     padding: 10px;
     text-align: center;
     transition: background-color 0.3s; /* Transición suave del color de fondo */
@@ -839,49 +877,13 @@ img {
     color: rgb(104, 9, 9); /* Color de letra blanco */
   }
   /*para reponsive*/
-  /* Estilos para pantallas grandes */
-.nav_menu {
-    display: none; /* Oculta el icono del menú en pantallas grandes */
-}
-
-nav ul {
-    display: flex; /* Muestra la lista horizontalmente en pantallas grandes */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    margin-right: 20px;
-}
-
-/* Estilos para pantallas pequeñas */
-@media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .nav_menu {
-        display: block; /* Muestra el icono del menú solo en pantallas pequeñas */
-        cursor: pointer;
-    }
-
-    .nav_link--menu {
-        display: none; /* Oculta la lista en pantallas pequeñas */
-        background-color: #333;
-        position: absolute;
-        top: 60px; /* Ajusta la posición según tus necesidades */
-        left: 0;
-        width: 100%;
-    }
-
-    .nav_menu.active + .nav_link--menu {
-        display: flex !important; /* Muestra la lista en posición vertical */
-        flex-direction: column;
-    }
-
-    .nav_items {
-        margin: 10px 0; /* Espaciado vertical entre elementos de la lista */
-    }
-
-    /* Muestra los enlaces por defecto en posición vertical */
-    .nav_links {
         display: block;
+    }
+
+    #menu {
+        display: none;
+        list-style-type: none;
     }
 }

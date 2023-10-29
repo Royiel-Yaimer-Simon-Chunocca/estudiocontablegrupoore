@@ -11,11 +11,16 @@ function showConcept(service) {
   conceptoSeleccionado.style.display = 'block';
 }
 
-// Agrega un evento de clic al icono de menú para mostrar/ocultar el menú
-const navMenu = document.querySelector('.nav_menu');
-const navLinks = document.querySelector('.nav_link--menu');
+const menuIcon = document.getElementById("menu-icon");
+const menu = document.getElementById("menu");
 
-navMenu.addEventListener('click', () => {
-    navMenu.classList.toggle('active'); // Agrega o quita la clase 'active' al icono de menú
-    navLinks.classList.toggle('active'); // Agrega o quita la clase 'active' al menú
+let isMenuVisible = false;
+
+menuIcon.addEventListener("click", function () {
+    if (isMenuVisible) {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+    isMenuVisible = !isMenuVisible; // Cambiar el estado del menú
 });
