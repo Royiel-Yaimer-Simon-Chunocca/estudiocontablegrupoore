@@ -12,15 +12,12 @@ function showConcept(service) {
 }
 
 const menuIcon = document.getElementById("menu-icon");
-const menu = document.getElementById("menu");
+    const menuItems = document.getElementById("menu-items");
 
-let isMenuVisible = false;
-
-menuIcon.addEventListener("click", function () {
-    if (isMenuVisible) {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-    isMenuVisible = !isMenuVisible; // Cambiar el estado del menú
-});
+    menuIcon.addEventListener("click", function () {
+        if (menuItems.style.display === "block") {
+            menuItems.style.display = "none"; // Oculta el menú si ya está visible
+        } else {
+            menuItems.style.display = "block"; // Muestra el menú si está oculto
+        }
+    });

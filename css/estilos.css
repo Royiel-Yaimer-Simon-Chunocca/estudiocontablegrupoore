@@ -27,6 +27,8 @@ body{
     display: grid;
     grid-template-rows: 100px 1fr;
     color: #fff;
+    /**AUMENTANDO PARA QUE SEA RESPONSIVO**/
+   
 }
 
 .hero::before{
@@ -207,14 +209,21 @@ body{
     color: rgb(10, 10, 10);
 
 }
-.about_main{
+.about_main {
     padding-top: 80px;
     display: grid;
     width: 90%;
     margin: 0 auto;
     gap: 1em;
-    grid-template-columns: repeat(auto-fit,minmax(260px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
     column-gap: 5em;
+    transition: transform 0.1s; /* Agregamos una transición suave para el cambio de tamaño */
+}
+
+/* Aplicar el cambio de tamaño al hacer hover */
+.about_main:hover {
+    transform: scale(0.98); /* Cambio de tamaño al 110% del tamaño original en hover */
+    cursor: pointer;
 }
 .about_main p {
     max-width: 100%; /* Asegura que el texto no se desborde de las columnas */
@@ -243,17 +252,26 @@ body{
   }
 /*knowledege*/
 .knowledege{
-    background-color: rgba(255, 255, 255, 0.9);
-    background-size: 20px 20px;
-    background-position: 0 0,10px 10px;
+    background-image: url('../imagen/contador28.jpg');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen en su posición */
+    background-position: center center; /* Centra la imagen en el fondo */
+
+    /* Ajusta la opacidad para que la imagen se note */
+    background-color: rgba(0, 0, 0, 0.6); /* Cambia el valor alpha (0.6) para ajustar la opacidad */
+
+    /* Añade estilos adicionales, si es necesario */
     overflow: hidden;
     clip-path: polygon(50% 0, 100% 1%, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 1%);
-
+    
 }
+
+
 .knowledege_paragraph{
     line-height: 1.7;
     margin-bottom: 15px;
-    color: rgb(10, 10, 10);
+    color: rgb(248, 244, 244);
     text-align: justify;
     padding-left: 40px;
     font-weight: normal; /* Elimina la negrita */
@@ -267,12 +285,19 @@ body{
     
     gap: 200px; /* Añade espacio entre las columnas */
     transition: transform 0.2s; /* Agregamos una transición suave */ 
+    transition: transform 0.3s, background-color 0.3s; /* Agregamos transiciones suaves para el cambio de tamaño y color de fondo */
     
 }
 
 
+
 .knowledge_container:hover {
-    transform: scale(1.1); /* Cambia el tamaño al 110% cuando se pasa el cursor sobre él */
+   
+
+    transform: scale(1.1); /* Cambio de tamaño al 110% del tamaño original en hover */
+    background-color: rgba(255, 0, 0, 0.6); /* Cambio de color de fondo a rojo en hover (ajusta los valores RGBA según lo que desees) */
+    cursor: pointer;
+
 }
 .knowledege_picture{
     max-width: 500px;
@@ -280,7 +305,7 @@ body{
 }
 .subtitle {
     text-align: center; /* Centramos el texto horizontalmente */
-    color: rgb(10, 10, 10);/* Cambiamos el color del texto a blanco */
+    color: rgb(245, 238, 238);/* Cambiamos el color del texto a blanco */
     text-align: justify;
     padding-left: 200px;
     align-items: center; /* Centramos verticalmente */
@@ -310,7 +335,9 @@ body{
     background-image: url('../imagen/fondo123.jpg'), url('../imagen/contadora2.jpg'), url('../imagen/contadora100.jpg'); /* Rutas de las tres imágenes */
     background-size: cover; /* Ajusta el tamaño de las imágenes al contenedor */
     animation: backgroundTransition 6s linear infinite; /* 2 segundos por imagen, 3 imágenes en total */
+   
 }
+
 
 @keyframes backgroundTransition {
     0% {
@@ -669,6 +696,7 @@ img {
 }
 .column:hover .box {
     background-color: black; /* Cambiar el color de fondo a negro al pasar el cursor */
+    background-image: url(../imagen/contador28.jpg);
     color: white; /* Cambiar el color del texto a blanco al pasar el cursor */
     height: 380px;
 }
@@ -823,15 +851,14 @@ img {
   /* Estilo para cada noticia individual */
   .noticia {
     flex: 1;
-    background-color: rgba(255, 256, 256, 0.10);
-    
+    background-image: url(../imagen/contador28.jpg);
     padding: 10px;
     text-align: center;
     transition: background-color 0.3s; /* Transición suave del color de fondo */
     position: relative;
-    height: 500PX;
-    width: 100PX;
-  }
+    height: 500px; /* Corrección: cambia "500PX" a "500px" */
+    width: 100px;  /* Corrección: cambia "100PX" a "100px" */
+}
   /*MEJORANDO NOSOTROS*/
    .tamaño{
      width: 300px;
@@ -848,10 +875,9 @@ img {
 
   /* Estilo para el contenido que aparecerá al hacer hover en la noticia */
   .noticia:hover {
-    background-color: #000; /* Cambio de fondo a negro en hover */
+    background-color: red; /* Cambio de fondo a rojo en hover */
     cursor: pointer;
-  }
-  
+}
   .noticia:hover h3,
   .noticia:hover p {
     display: block; /* Mostrar título y párrafo en hover */
@@ -877,13 +903,6 @@ img {
     color: rgb(104, 9, 9); /* Color de letra blanco */
   }
   /*para reponsive*/
-  @media (max-width: 768px) {
-    .nav_menu {
-        display: block;
-    }
-
-    #menu {
-        display: none;
-        list-style-type: none;
-    }
+  #menu-items {
+    display: none; /* Oculta el menú en pantallas pequeñas */
 }
