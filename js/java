@@ -25,3 +25,8 @@ menuIcon.addEventListener("click", () => {
         isNavVisible = true;
     }
 });
+
+function toggleMenu() {
+  var navList = document.getElementById('menu-items');
+  navList.style.display = (navList.style.display === 'none' || navList.style.display === '') ? 'block' : 'none';
+}
