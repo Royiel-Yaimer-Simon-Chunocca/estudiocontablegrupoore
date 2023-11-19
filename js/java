@@ -10,23 +10,25 @@ function showConcept(service) {
   const conceptoSeleccionado = document.getElementById(`concepto_${service}`);
   conceptoSeleccionado.style.display = 'block';
 }
-//para menu
-const menuIcon = document.getElementById("menu-icon");
-const navLinksResponsive = document.querySelector(".nav-links-responsive");
 
-let isNavVisible = false; // Variable para rastrear el estado de visibilidad
+document.addEventListener('DOMContentLoaded', function () {
+   var navMenu = document.querySelector('.nav_menu');
+   var menuItems = document.getElementById('menu-items');
 
-menuIcon.addEventListener("click", () => {
-    if (isNavVisible) {
-        navLinksResponsive.style.display = "none";
-        isNavVisible = false;
-    } else {
-        navLinksResponsive.style.display = "block";
-        isNavVisible = true;
-    }
+   navMenu.addEventListener('click', function () {
+       if (window.innerWidth <= 768) {
+           menuItems.style.display = (menuItems.style.display === 'none' || menuItems.style.display === '') ? 'block' : 'none';
+       }
+   });
+
+   // Agregar manejo de clic para cerrar el menú al hacer clic en un enlace
+   var navLinks = document.querySelectorAll('.nav_items a');
+
+   navLinks.forEach(function (link) {
+       link.addEventListener('click', function () {
+           if (window.innerWidth <= 768) {
+               menuItems.style.display = 'none';
+           }
+       });
+   });
 });
-
-function toggleMenu() {
-  var navList = document.getElementById('menu-items');
-  navList.style.display = (navList.style.display === 'none' || navList.style.display === '') ? 'block' : 'none';
-}

@@ -919,6 +919,7 @@ img {
   }
   /* para reponsive */
 /* Estilos generales */
+/* Estilos generales */
 .nav_link--menu {
     display: flex;
     justify-content: space-between;
@@ -941,6 +942,7 @@ img {
 @media (max-width: 768px) {
     #menu-items {
         display: none; /* Oculta el menú en pantallas pequeñas por defecto */
+        background-color: #333; /* Fondo negro para el menú desplegable */
     }
 
     .nav_menu {
@@ -952,7 +954,19 @@ img {
         cursor: pointer;
     }
 
-    .nav_items {
-        display: block; /* Muestra la lista en pantallas pequeñas */
+    .nav_menu:hover #menu-items {
+        display: block; /* Muestra la lista en pantallas pequeñas al hacer hover en el menú */
     }
+
+    .nav_items {
+        display: none; /* Oculta la lista por defecto en pantallas pequeñas */
+    }
+
+    .nav_items a {
+        color: #fff; /* Color del texto en el menú desplegable */
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+    }
+    
 }
