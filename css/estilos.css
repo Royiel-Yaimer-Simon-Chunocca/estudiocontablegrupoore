@@ -100,6 +100,7 @@ body{
 
 }
 
+
 .nav_links{
     color: #fff;
     text-decoration: none;
@@ -913,4 +914,37 @@ img {
   /*para reponsive*/
   #menu-items {
     display: none; /* Oculta el menú en pantallas pequeñas */
+}
+.nav_link--menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav_links {
+    margin-right: 20px;
+}
+
+.nav_menu {
+    display: none;
+}
+
+/* Estilos para pantalla pequeña */
+@media (max-width: 768px) {
+    .nav_link--menu {
+        display: none;
+    }
+
+    .nav_menu {
+        display: block;
+    }
+
+    .nav-links-responsive {
+        display: none;
+    }
+    .show-menu .nav_link--menu {
+        display: block; /* Muestra los elementos de la lista cuando se aplica la clase show-menu */
+    
+}
 }

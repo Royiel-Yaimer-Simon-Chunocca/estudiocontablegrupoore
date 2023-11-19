@@ -10,14 +10,18 @@ function showConcept(service) {
   const conceptoSeleccionado = document.getElementById(`concepto_${service}`);
   conceptoSeleccionado.style.display = 'block';
 }
-
+//para menu
 const menuIcon = document.getElementById("menu-icon");
-    const menuItems = document.getElementById("menu-items");
+const navLinksResponsive = document.querySelector(".nav-links-responsive");
 
-    menuIcon.addEventListener("click", function () {
-        if (menuItems.style.display === "block") {
-            menuItems.style.display = "none"; // Oculta el menú si ya está visible
-        } else {
-            menuItems.style.display = "block"; // Muestra el menú si está oculto
-        }
-    });
+let isNavVisible = false; // Variable para rastrear el estado de visibilidad
+
+menuIcon.addEventListener("click", () => {
+    if (isNavVisible) {
+        navLinksResponsive.style.display = "none";
+        isNavVisible = false;
+    } else {
+        navLinksResponsive.style.display = "block";
+        isNavVisible = true;
+    }
+});
